@@ -1,0 +1,83 @@
+* {
+  font-family: 'Baloo Paaji', cursive;
+}
+
+body, html, #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#foursquarelogo {
+  position:absolute;
+  bottom: 25px;
+  z-index: 2;
+}
+
+
+#map {
+    width: 100%;
+    z-index: 0;
+}
+
+.list-view {
+    background: gray;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 2px 6px;
+    padding: 0 8px;
+    opacity: 0.7;
+}
+
+
+#nav-button {
+  display: block;
+  float: left;
+  background: gray;
+  color: blue;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+}
+
+
+#search {
+    margin: 80px 0px 0px 6px;
+    height: 30px;
+    width: 300px;
+}
+
+
+/* #sidebar and .slide-out-of-view are responsible for the tranistion of the sidebar */
+
+#sidebar {
+    left:0;
+    top:20px;
+    width: 300px;
+    position: fixed;
+    -webkit-transition: 2.5s;
+    transition: 2.5s;
+    z-index: 1;
+
+}
+
+.slide-out-of-view {
+    -webkit-transform: translate3d( -320px ,0,0) rotateY(90deg);
+    transform: translate3d( -320px ,0,0)  rotateY(90deg);
+}
+
+li:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+@media screen and (max-width: 300px) {
+  #foursquarelogo {
+    display: none;
+  }
+}

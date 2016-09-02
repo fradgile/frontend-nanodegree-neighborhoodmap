@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1">
+
+    <title>San Marcos Bars</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Paaji">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <button type="button" id="nav-button" class="btn btn-default" aria-label="Left Align">
+      <span id="menu-icon" class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+    </button>
+
+    <div id="sidebar">
+      <input id="search" type="text" placeholder="Search Location. Powered by Foursquare." data-bind="textInput: searchString" />
+      <div class="list-view" >
+        <ul class="sidebar-nav" data-bind="foreach: filteredLocations">
+          <li><span data-bind="text: name, click: $root.listItemClickHandler" /></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <img src="https://ss0.4sqi.net/img/poweredByFoursquare/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png"  id="foursquarelogo"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlx7fmRana5xjxz6tDgEVePavMRGH0zrQ&callback=initMap" async defer></script>
+
+  </body>
+</html>
