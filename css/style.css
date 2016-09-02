@@ -15,6 +15,16 @@ body, html, #map {
   z-index: 2;
 }
 
+#iw-container  .iw-title {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 22px;
+   font-weight: 400;
+   padding: 2px;
+   background-color: #48b5e9;
+   color: white;
+   margin: 1px;
+   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
+}
 
 #map {
     width: 100%;
@@ -24,11 +34,12 @@ body, html, #map {
 .list-view {
     background: gray;
     color: white;
-    height: 100%;
+    max-height: 250px;
     width: 100%;
     margin: 2px 6px;
     padding: 0 8px;
     opacity: 0.7;
+    overflow-y: auto;
 }
 
 #nav-button {
@@ -59,7 +70,6 @@ body, html, #map {
     -webkit-transition: 2.5s;
     transition: 2.5s;
     z-index: 1;
-
 }
 
 .slide-out-of-view {
@@ -75,5 +85,11 @@ li:hover {
 @media screen and (max-width: 300px) {
   #foursquarelogo {
     display: none;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .list-view {
+    max-height: 150px;
   }
 }

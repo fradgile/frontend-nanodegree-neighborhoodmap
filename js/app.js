@@ -76,8 +76,8 @@ var Location = function(data) {
                         animation: google.maps.Animation.DROP
                     });
 
-    var content =  '<div id="bodyContent">' +
-                      '<h4>' + data.name + '</h4>' +
+    var content =  '<div id="iw-container">' +
+                      '<div class="iw-title">' + data.name + '</div>' +
                       '<p><strong>Category: '+ data.category + '</strong></p>' +
                       '<p>Address: ' + data.formattedAddress + '</p>' +
                       '<p>Phone: ' + data.formattedPhone + '</p><div>' +
@@ -214,6 +214,7 @@ function markerClickHandler(){
     marker.setAnimation(null);
   },750);
 
+  hideSidebar();
   map.setCenter(this.position);
   infowindow.setContent(this.contentString);
   infowindow.open(map, this);
