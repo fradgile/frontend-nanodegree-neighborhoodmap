@@ -31,12 +31,9 @@ body, html, #map {
     opacity: 0.7;
 }
 
-
 #nav-button {
   display: block;
   float: left;
-  background: gray;
-  color: blue;
   margin-top: 10px;
   margin-left: 10px;
   width: 70px;
@@ -51,7 +48,6 @@ body, html, #map {
     height: 30px;
     width: 300px;
 }
-
 
 /* #sidebar and .slide-out-of-view are responsible for the tranistion of the sidebar */
 
