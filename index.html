@@ -23,14 +23,14 @@
       <input id="search" type="text" placeholder="Search Location. Powered by Foursquare." data-bind="textInput: searchString" />
       <div class="list-view" >
         <ul class="sidebar-nav" data-bind="foreach: filteredLocations">
-          <li><span data-bind="text: name, click: $root.listItemClickHandler" /></li>
+          <li><span data-bind="text: name, click: $root.listItemClickHandler"></span></li>
         </ul>
       </div>
     </div>
 
     <div id="map"></div>
 
-    <img src="https://ss0.4sqi.net/img/poweredByFoursquare/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png"  id="foursquarelogo"/>
+    <img id="foursquarelogo" src="https://ss0.4sqi.net/img/poweredByFoursquare/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png"  alt="Foursquare logo" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
