@@ -1,6 +1,8 @@
 # Neighborhood Map Project
 This application displays a selection of bars on a Google map.
 The neighborhood is San Marcos, Texas.
+The application is available at the following URL https://fradgile.github.io/frontend-nanodegree-neighborhoodmap/
+
 
 ## How To Use The App
 1. Open the index.html file in a browser.
