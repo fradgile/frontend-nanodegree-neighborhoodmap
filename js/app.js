@@ -84,7 +84,7 @@ var Location = function(data) {
                       '<p>Foursquare CheckIns: ' + data.checkinsCount + '</p>';
     if(data.url){
       content = content + '<a href="' + data.url + '" target="_blank">' + data.url + '</a>';
-    };
+    }
 
     this.marker.contentString = content;
 };
@@ -115,7 +115,7 @@ var MyViewModel = function() {
         data.locations.forEach(function(data){
           self.locations.push(new Location(data));
         });
-        alert("Foursquare is not responding but we have a few locations as a backup.")
+        alert("Foursquare is not responding but we have a few locations as a backup.");
       })
       .always(function() {
         // Add the marker to the location
@@ -125,7 +125,7 @@ var MyViewModel = function() {
           bounds.extend(location.marker.position);
         });
         map.fitBounds(bounds);
-      })
+      });
     });
 
     // Filter locations based on input search field
@@ -133,7 +133,7 @@ var MyViewModel = function() {
       var filter = self.searchString().toLowerCase();
       if (!filter) {
         // If the filter is empty display all markers and all locations
-        self.locations().forEach(function(location){ location.marker.setVisible(true) });
+        self.locations().forEach(function(location){ location.marker.setVisible(true); });
         return self.locations();
       } else {
           return ko.utils.arrayFilter(self.locations(), function(location) {
@@ -146,8 +146,8 @@ var MyViewModel = function() {
 
     // Clicking on a list item should cause the same effect as clicking on a marker.
     self.listItemClickHandler = function(location){
-      google.maps.event.trigger(location.marker, 'click')
-    }
+      google.maps.event.trigger(location.marker, 'click');
+    };
 
     self.makeLocationData = function(response){
       var venues = response.response.venues;
@@ -164,9 +164,9 @@ var MyViewModel = function() {
         data.formattedAddress = joint.location.formattedAddress;
         data.category = joint.categories[0].name;
         dataArray.push( new Location(data));
-      };
+      }
       return dataArray;
-    }
+    };
 };
 
 // This function is called when the Google API is finished loading.
@@ -204,7 +204,7 @@ function markerClickHandler(){
   var marker = this;
   // First stop all animations
   viewModel.locations().forEach(function(location){
-    location.marker.setAnimation(null)
+    location.marker.setAnimation(null);
   });
 
   // Start animation of marker that was clicked.
