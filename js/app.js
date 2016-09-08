@@ -77,7 +77,7 @@ var Location = function(data) {
                     });
 
     var content =  '<div id="iw-container">' +
-                      '<div class="iw-title">' + data.name + '</div>' +
+                      '<h3>' + data.name + '</h3>' +
                       '<p><strong>Category: '+ data.category + '</strong></p>' +
                       '<p>Address: ' + data.formattedAddress + '</p>' +
                       '<p>Phone: ' + data.formattedPhone + '</p><div>' +
@@ -180,16 +180,16 @@ function initMap() {
     disableDefaultUI: true,
     mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-        position: google.maps.ControlPosition.TOP_CENTER
+        position: google.maps.ControlPosition.LEFT_CENTER
     },
     zoomControl: true,
     zoomControlOptions: {
-        position: google.maps.ControlPosition.RIGHT_CENTER
+        position: google.maps.ControlPosition.LEFT_CENTER
     },
     scaleControl: true,
     streetViewControl: true,
     streetViewControlOptions: {
-        position: google.maps.ControlPosition.RIGHT_CENTER
+        position: google.maps.ControlPosition.LEFT_CENTER
     },
     fullscreenControl: true
   });
@@ -215,7 +215,7 @@ function markerClickHandler(){
   },750);
 
   hideSidebar();
-  map.setCenter(this.position);
+  //map.setCenter(this.position);
   infowindow.setContent(this.contentString);
   infowindow.open(map, this);
 }

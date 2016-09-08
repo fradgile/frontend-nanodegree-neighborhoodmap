@@ -15,17 +15,6 @@ body, html, #map {
   z-index: 2;
 }
 
-#iw-container  .iw-title {
-   font-family: 'Open Sans Condensed', sans-serif;
-   font-size: 22px;
-   font-weight: 400;
-   padding: 2px;
-   background-color: #48b5e9;
-   color: white;
-   margin: 1px;
-   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
-}
-
 #map {
     width: 100%;
     z-index: 0;
@@ -47,7 +36,7 @@ body, html, #map {
   float: left;
   margin-top: 10px;
   margin-left: 10px;
-  width: 70px;
+  width: 200px;
   height: 70px;
   position: fixed;
   z-index: 10;
