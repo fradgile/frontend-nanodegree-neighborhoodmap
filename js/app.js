@@ -76,11 +76,10 @@ var Location = function(data) {
                         animation: google.maps.Animation.DROP
                     });
 
-    var content =  '<div id="iw-container">' +
-                      '<h3>' + data.name + '</h3>' +
+    var content =  '<h3>' + data.name + '</h3>' +
                       '<p><strong>Category: '+ data.category + '</strong></p>' +
                       '<p>Address: ' + data.formattedAddress + '</p>' +
-                      '<p>Phone: ' + data.formattedPhone + '</p><div>' +
+                      '<p>Phone: ' + data.formattedPhone + '</p>' +
                       '<p>Foursquare CheckIns: ' + data.checkinsCount + '</p>';
     if(data.url){
       content = content + '<a href="' + data.url + '" target="_blank">' + data.url + '</a>';
@@ -218,4 +217,8 @@ function markerClickHandler(){
   //map.setCenter(this.position);
   infowindow.setContent(this.contentString);
   infowindow.open(map, this);
+}
+
+function googleError(){
+  window.location.href = 'error.html';
 }
